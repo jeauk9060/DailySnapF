@@ -55,7 +55,7 @@ const validForm = computed(() => {
 const submitForm = async () => {
   if (validForm.value) {
     try {
-      const response = await axios.post('http://localhost:8080/api/getinfo', {
+      const response = await axios.post('http://localhost:8080/api/userinfo', {
         name: state.first,
         email: state.email
       });
