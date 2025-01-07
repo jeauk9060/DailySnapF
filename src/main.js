@@ -17,6 +17,11 @@ import * as directives from 'vuetify/directives'
 import { aliases, mdi } from 'vuetify/iconsets/mdi' // Material Design Icons
 import '@mdi/font/css/materialdesignicons.css' // 아이콘 CSS 적용
 
+// 부트스트랩 및 아이콘 추가
+import 'bootstrap/dist/css/bootstrap.min.css' // 부트스트랩 스타일 적용
+import 'bootstrap' // 부트스트랩 JavaScript 적용
+import 'bootstrap-icons/font/bootstrap-icons.css' // 부트스트랩 아이콘 CSS 적용
+
 // 테마 및 아이콘 구성
 const vuetify = createVuetify({
   components,

@@ -9,7 +9,7 @@
 </template>
 
 <script setup>
-import TextFiled from "@/layouts/TextFiled.vue";
+import TextFiled from "@/layouts/MailTextFiled.vue";
 </script>
 
 <style lang="scss" scoped></style>
