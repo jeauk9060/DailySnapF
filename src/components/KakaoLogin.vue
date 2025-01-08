@@ -1,7 +1,6 @@
 <template>
   <div class="container">
     <h1>카카오 로그인</h1>
-    <!-- 카카오 로그인 버튼 -->
     <a :href="kakaoUrl">
       <img src="/kakao_login_medium_narrow.png" alt="Kakao Login">
     </a>
@@ -9,25 +8,22 @@
 </template>
 
 <script>
-import axios from 'axios';
+import axios from 'axios'; // axios 임포트
 
 export default {
   data() {
     return {
-      kakaoUrl: '' // 카카오 로그인 URL 저장 변수
+      kakaoUrl: '' // 카카오 로그인 URL 저장
     };
   },
-  mounted() {
-    this.getKakaoLoginUrl(); // 컴포넌트 마운트 시 URL 요청
-  },
-  methods: {
-    async getKakaoLoginUrl() {
-      try {
-        const response = await axios.get('http://localhost:8080/login/kakao');
-        this.kakaoUrl = response.data.location; // URL 저장
-      } catch (error) {
-        console.error('카카오 로그인 URL 요청 실패:', error);
-      }
+  async mounted() {
+    try {
+      // 로그인 URL 요청
+      const response = await axios.get('http://localhost:8080/login/kakao');
+      this.kakaoUrl = response.data.location; // 동적 URL 저장
+    } catch (error) {
+      console.error('카카오 로그인 URL 요청 실패:', error);
+      alert('로그인 URL을 가져오는 데 실패했습니다.');
     }
   }
 };
