@@ -85,8 +85,7 @@ const submitForm = async () => {
     try {
       const response = await axios.post('http://localhost:8080/api/userinfo', {
         email: form.email,                           // 이메일
-        privacy_consent: form.terms,                 // 개인정보 동의 여부
-        subscription_status: 1,                      // 구독 상태 (기본값 1)
+        privacyConsent: form.terms,                 // 개인정보 동의 여부
       });
 
       alert('구독 신청이 완료되었습니다!');
