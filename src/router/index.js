@@ -1,11 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import MailTestPage from '@/views/MailTestPage.vue'
 import HomePage from '@/views/HomePage.vue'
+import KakaoLogin from '@/components/KakaoLogin.vue'
 
 // 라우트 설정
 const routes = [
   {
-    path: '/',                     // 기본 경로    
+    path: '/',                     // 기본 경로
     name: 'HomePage',           // 라우트 이름 (선택 사항)
     component: HomePage       // 연결할 컴포넌트
   },
@@ -13,6 +14,11 @@ const routes = [
     path: '/mail',                 // 기본 경로
     name: 'MailTestPage',      // 라우트 이름 (선택 사항)
     component: MailTestPage    // 연결할 컴포넌트
+  },
+  {
+    path: '/login',                 // 기본 경로
+    name: 'KakaoLoginPage',      // 라우트 이름 (선택 사항)
+    component: KakaoLogin    // 연결할 컴포넌트
   },
 ]
 
